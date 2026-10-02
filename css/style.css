@@ -1,44 +1,59 @@
-/* Bước 3: body - font family & font size */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 150%;
+/* 1 & 2. Skip to Main Content Link Styling */
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-/* Bước 4: header - background color */
-header {
-  background-color: #f0f4f8;
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
 }
 
-/* Bước 5: nav - background color */
+/* 3. Comment out existing styling for the li element */
+/*
+li {
+  display: inline;
+  width: auto;
+}
+*/
+
+/* 4. Nav element styling */
 nav {
+  display: inline-block;
+  width: 80%;
   background-color: #333333;
 }
 
-/* Bước 6: main - background color & font size */
-main {
-  background-color: #ffffff;
-  font-size: 1rem;
+/* 5. Descendant selector: only images inside nav */
+nav img {
+  width: 10%;
 }
 
-/* Bước 7: footer - background color */
-footer {
-  background-color: #e0e0e0;
+/* 6 & 8. Two-column grid */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
 }
 
-/* Bước 8: li - display & width */
-li {
-  display: inline-block;
-  width: 30%;
+/* 7. Descendant selector: only images inside .grid */
+.grid img {
+  width: 100%;
 }
 
-/* Bước 9: h1 - text alignment, font family & color */
-h1 {
-  text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #2c3e50;
-}
-
-/* Bước 10: p - line height */
-p {
-  line-height: 1.6;
+/* 9. Flex class */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
